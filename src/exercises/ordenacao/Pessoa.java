@@ -11,7 +11,11 @@ public class Pessoa implements Comparable<Pessoa> {
         this.nome = nome;
         this.dataDeNascimento = dataDeNascimento;
     }
-    
+
+    public String getNome() {
+        return nome;
+    }
+
     @Override
     public String toString() {
         return "Pessoa{" +
@@ -23,6 +27,6 @@ public class Pessoa implements Comparable<Pessoa> {
     // Fazer a classe Pessoa ser ordenada pelos nomes das pessoas
     @Override
     public int compareTo(Pessoa pessoa) {
-        return 0;
+        return this.getNome().toLowerCase().compareTo(pessoa.getNome().toLowerCase());
     }
 }
