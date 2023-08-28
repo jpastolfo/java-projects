@@ -1,11 +1,6 @@
 package interfaces;
 
-public class Golfinho extends Animal implements Nadador, Amamentador {
-
-    @Override
-    public void alimentar() {
-        super.alimentar();
-    }
+public class Tilapia extends Animal implements Nadador {
 
     @Override
     public void movimentar() {
@@ -17,5 +12,8 @@ public class Golfinho extends Animal implements Nadador, Amamentador {
         System.out.println("Respirando!");
     }
 
-
+    @Override
+    public void nadar() {
+        Nadador.super.nadar();
+    }
 }

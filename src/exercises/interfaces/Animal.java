@@ -1,12 +1,11 @@
 package interfaces;
 
-public interface Animal {
-    default void alimentar() {
-        movimentar();
+public abstract class Animal {
+    void alimentar() {
         System.out.println("Alimentando");
     }
 
-    void movimentar();
-    void respirar();
+    abstract void movimentar();
+    abstract void respirar();
 
 }

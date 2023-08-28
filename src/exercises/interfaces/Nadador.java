@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Nadador extends Animal {
+public interface Nadador {
 
     default void nadar() {
         System.out.println("Nadando");
