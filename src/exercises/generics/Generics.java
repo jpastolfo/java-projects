@@ -11,10 +11,6 @@ public class Generics {
 
     private static String maior(String primeira, String segunda) {
 
-        if (primeira.getBytes(StandardCharsets.US_ASCII)[0]
-                > segunda.getBytes(StandardCharsets.US_ASCII)[0])
-            return primeira;
-        return segunda;
-
+        return (primeira.compareTo(segunda) > 0) ? primeira : segunda;
     }
 }
