@@ -10,8 +10,8 @@ public class SistemaDeSorteios {
         elementos.add("maçã");
         elementos.add("abacate");
         elementos.add("tomate");
-        Sorteador<String> sorteador = new Sorteador<>(elementos);
-        List<Grupo<String>> grupos = sorteador.agrupar(3);
+        Agrupador<String> agrupador = new Agrupador<>(elementos);
+        List<Grupo<String>> grupos = agrupador.agrupar(3);
 
         for (Grupo<String> grupo : grupos) {
             System.out.println(grupo.toSring());
