@@ -13,22 +13,24 @@ public class Sorteador {
     }
 
     public String sortear() {
+        //if (elementos.isEmpty()) return null;
         Random randomIndex = new Random();
         int numeroSorteado = randomIndex.nextInt(elementos.size());
-        String elementoSorteado = elementos.get(numeroSorteado);
-        elementos.remove(elementoSorteado);
-        return elementoSorteado;
+        return elementos.remove(numeroSorteado);
     }
 
-    public static void main(String[] args) {
-        List<String> elementos  = new ArrayList<>();
-        elementos.add("banana");
-        elementos.add("maçã");
-        elementos.add("abacate");
-        elementos.add("tomate");
-        Sorteador sorteador = new Sorteador(elementos);
-        while (!elementos.isEmpty()) {
-            System.out.println("Elemento sorteado: " + sorteador.sortear());
+    public List<Grupo> agrupar(int numeroDeGrupos) {
+        List<Grupo> grupos = new ArrayList<>(numeroDeGrupos);
+        for (int i = 0; i < numeroDeGrupos; i++) {
+            grupos.add(new Grupo(i));
         }
+
+        while (!elementos.isEmpty()) {
+            for (Grupo grupo : grupos) {
+                grupo.adicionarNoGrupo(sortear());
+                if (elementos.isEmpty()) break;
+            }
+        }
+        return grupos;
     }
 }
