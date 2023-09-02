@@ -2,9 +2,9 @@ package sorteador;
 
 import java.util.ArrayList;
 import java.util.List;
-public class Grupo {
+public class Grupo<E> {
 
-    private final List<String> elementosDoGrupo;
+    private final List<E> elementosDoGrupo;
     private final int indice;
 
     public Grupo(int indice) {
@@ -12,7 +12,7 @@ public class Grupo {
         this.elementosDoGrupo = new ArrayList<>();
     }
 
-    public void adicionarNoGrupo(String novo) {
+    public void adicionarNoGrupo(E novo) {
         elementosDoGrupo.add(novo);
     }
 
