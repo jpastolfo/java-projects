@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Agrupador<T> {
 
-    private final Sorteador<T> sorteador;
+    private final SorteadorMeio<T> sorteador;
 
     public Agrupador(List<T> elementos) {
-        this.sorteador = new Sorteador<>(elementos);
+        this.sorteador = new SorteadorMeio<>(elementos);
     }
 
     public List<Grupo<T>> agrupar(int numeroDeGrupos) {
