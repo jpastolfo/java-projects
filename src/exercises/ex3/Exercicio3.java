@@ -15,5 +15,6 @@ public class Exercicio3 {
         System.out.println("Último elemento: " + stack.pop());
         System.out.println("Último elemento após remoção: " + stack.peek());
         System.out.println("Tamanho: " + stack.size());
+        System.out.println("YES");
     }
 }
