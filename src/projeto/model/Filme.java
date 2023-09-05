@@ -8,5 +8,10 @@ public class Filme implements Entidade<Integer> {
     private String nome;
     private String categoria;
     private List<Ator> atores;
-    private Diretor diretor;
+    private List<Diretor> diretores;
+
+    @Override
+    public Integer getID() {
+        return id;
+    }
 }
