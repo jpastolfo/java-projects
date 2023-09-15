@@ -1,8 +1,6 @@
-package generics;
+package listaEmOrdemAlfabetica;
 
-import java.nio.charset.StandardCharsets;
-
-public class Generics {
+public class MaiorString {
     public static void main(String[] args) {
         String a = "c";
         String b = "b";
